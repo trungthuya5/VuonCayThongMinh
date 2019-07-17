@@ -1,0 +1,6 @@
+điều khiển bật tắt bóng đèn
+điều chỉnh thang đo độ ẩm < rangelimit
+hiển thị nhiệt độ độ ẩm độ ẩm đất max, min theo ngày tuần tháng
+hiển thị số lần nhấn phím
+
+

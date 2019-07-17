@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        html, body {
+            color: #fff;
+            font-size: bold;
+        }
+        a {
+            color: #fff;
+        }
+        a:hover {
+            color: #fff;
+        }
+        .menu ul{
+            background: #2f353a;
+            width: 250px;
+            padding: 0;
+            list-style-type: none;
+            text-align: left;
+        }
+        .menu li {
+            width: auto;
+            height: 40px;
+            line-height: 40px;
+        }
+
+        .menu li a {
+            
+            padding: 0 1em;
+            text-decoration: none;
+            display: block;
+        }
+        .menu li a:hover {
+            background: #20a8d8;
+        }
+
+        .active {
+            background: #3a4248;
+        }
+
+        .title {
+            padding: 0 1em;
+        }
+        .breadcrumb {
+            background: #2f353a;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3">
+                    <div class="menu">
+                            <ul class="non-style">
+                                <li class="active"><a href="/">DashBoard</a></li>
+                                <li class="title">Info</li>
+                                <li><a href="/">Name</a></li>
+                                <li><a href="/">Senser</a></li>
+                                <li><a href="/">Continur</a></li>
+                            </ul>
+                 </div>
+            </div>
+            <div class="col-9">
+                <div class="breadcrumb">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="/socket.io/socket.io.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+            $(function () {
+                var socket = io();
+                socket.on("led", function(msg){
+                    alert(msg);
+                })
+
+                socket.emit("test", function(msg){
+                    console.log(msg);
+                })
+                return false;
+            });
+            </script>
+
+</body>
+</html>

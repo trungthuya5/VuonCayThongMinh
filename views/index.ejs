@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Đồ án 4: Thiết kế vườn cây thông minh -  Nguyễn Trung Thùy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="/public/css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="/public/js/main.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            Đồ án 4: Vườn cây thông minh
+
+            <div class="top-menu">
+                <ul>
+                    <li>
+                        <a href="#home">HOME</a>
+                    </li>
+                    <li>
+                        <a href="#gioithieu">Giới thiệu</a>
+                    </li>
+                    <li>
+                        <a href="#dieukhien">Điều khiển</a>
+                    </li>
+                    <li>
+                        <a href="#caidat">Cài đặt</a>
+                    </li>
+                    <li>
+                        <a href="#data">Bảng</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- <div class="left">
+            <div class="avatar" style="text-align: center;">
+                DUONGDEV
+            </div>
+            <div class="menu">
+                <ul>
+                    Dashboard
+                    <li><a href="#gioithieu">Giới thiệu</a></li>
+                    <li><a href="#dulieu">Bảng dữ liệu</a></li>
+                    <li><a href="#dieukhien">Bảng điều khiển</a></li>
+                    <li><a href="#thongke">Thống kê</a></li>
+                    <li><a href="#banquyen">Bản quyền</a></li>
+                </ul>
+            </div>
+        </div> -->
+        <div class="main-container">
+
+             <!-- <div class="breadcrumb">
+                    DASHBOARD
+                </div> -->
+
+            <div id="home" class="info">
+                <div class="grid-container">
+                    <div class="item8" style="text-align: center; padding-top: 70px;padding-top: 40px;">
+                        <br>
+                        <br>
+                        <br>
+                        <h1>ĐỒ ÁN 4:</h1>
+                        <h3>Thiết kế vườn cây thông minh</h3>
+                        <br>
+                        <br>
+                        <em>--- Nguyễn Trung Thùy ---</em>
+                    </div>
+                    <div class="item4">
+                        <img src="/public/images/34.png" width="360" alt="">
+                    </div>
+                </div>
+            </div>
+            <div id="gioithieu" class="info">
+                <div class="grid-container">
+
+                    <div class="item4"></div>
+
+                    <div class="item4">
+                        <h1>Chức năng sản phẩm</h1>
+                         - Hiển thị độ ẩm đất <br>
+                         - Điều khiển máy bơm bằng tay hoặc tự động <br>
+                         - Cấu hình thông số qua web <br>
+                         - Hiển thị dữ liệu theo thời gian thực <br>
+                         - Lưu trữ cấu hình qua database Postgresql <br>
+                         - Hoạt động đồng nhất giữa các thiết bị
+                    </div>
+
+                    <div class="item4">
+                        <img src="/public/images/33.png" width="240" alt="">
+                    </div>
+
+                    <div class="item5" style="text-align: center;">
+                        <br>
+                        <img src="https://bizweb.dktcdn.net/thumb/large/100/190/540/products/arduino-wemos-d1-r2-wifi-uno.jpg?v=1490854863677" width="180"
+                            alt="">
+                    </div>
+                    <!-- <div class="item1"></div> -->
+                     <div class="item3"></div> 
+                    <div class="item4" style="text-align: left;">
+                        <h1>Module Wifi ESP8266 Uno</h1>
+                        - CPU
+                        <b>ESP8266</b>
+                        <br> - Hỗ trợ kết nối
+                        <b>WiFi</b>
+                        <br> - Tương thích
+                        <b>Arduino UNO</b>
+                        <br> - Có thể lập trình được bằng
+                        <b>C/C++</b>,
+                        <b>Arduino IDE</b>,
+                        <b>Micropython</b>,
+                        <b>NodeMCU - Lua</b>
+                        <br> - Nguồn
+                        <b>9-24V</b> hay
+                        <b>5V</b> từ
+                        <b>USB</b>
+                        <br> -
+                        <b>11 IO</b>,
+                        <b>1 Analog</b> in
+                        <br> -
+                        <b>4 Mbytes Flash</b>
+                        <br> -
+                        <b>Module ESP-12F</b> chỉ
+                        <b>3.3 VDC</b> ( tối đa
+                        <b>3.6 VDC</b> )
+                        <br>
+                        <br><br>
+                    </div>              
+
+                  
+                    <div class="item4"></div>
+                    
+                    <div class="item4">
+                        <h1>    Cảm biến độ ẩm đất</h1>
+                                - Điện áp hoạt động: 3.3V-5V<br>
+                                - Kích thước PCB: 3cm * 1.6cm<br>
+                                - Led báo hiệu<br>
+                                - Led đỏ báo nguồn<br>
+                                - Led xanh báo mức độ ẩm ở pin DO<br>
+                    </div>
+                    <div class="item4">
+                        <img src="https://bizweb.dktcdn.net/100/171/563/products/tb2fuditvxxxxbbxpxxxxxxxxxx-2876359570-jpg-600x600.jpg?v=1487427540747" width="240px" alt="">
+                    </div>
+                   
+                </div>
+            </div> -->
+
+            <div id="dieukhien" class="dieukhien">               
+                <div class="grid-container">
+                    <div class="item4 text-center">
+                        <button class="circle d1">ON</button><br><br>
+                        <b>THIẾT BỊ 1</b>
+                    </div>
+                    <div class="item4 text-center">
+                        <button class="circle d2">ON</button><br><br>
+                        <b>THIẾT BỊ 2</b>
+                    </div>
+                    <div class="item4 text-center">
+                        <button class="circle d3">ON</button><br><br>
+                        <b>MÁY BƠM</b>
+                    </div>
+                </div>
+                <div class="grid-container">
+                    <div class="item6 text-center">
+                        <button class="circle d4">ON</button><br><br>
+                        <b>TẤT CẢ THIẾT BỊ</b>
+                    </div>
+                    <div class="item6 text-center">
+                        <button class="circle d5">ON</button><br><br>
+                        <b>MÁY BƠM TỰ ĐỘNG</b>
+                    </div>
+                </div>
+            </div>
+            <div id="caidat" class="caidat">
+
+                <div class="grid-container">
+                    <div class="item12">
+                        <div id="doamdat">Độ ẩm hiện tại: đang cập nhật</div>
+                    </div>
+                    <div class="item12  text-center">
+                        Bật máy bơm khi độ ẩm dưới : <br> 
+                        
+                        <input id="val1" type="number" min="0" max="100" value="50" style="height: 30px; padding-left: 10px; border: 1px solid #345">
+                        <button class="submit">Submit</button>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- <div id="banquyen" class="banquyen text-center" style="padding: 50px; font-weight: bold;">
+                
+                <br>Nguyễn Trung Thùy <br><br> TK13.3<br><br><br>
+                <h3>ĐỒ ÁN 4: THIẾT KẾ HỘP TRỒNG CÂY THÔNG MINH</h3>
+                <br>
+                <h1>Cám ơn thầy và các bạn đã lắng nghe</h1>
+
+
+            </div> -->
+
+        
+        <div id="data" class="data"><div id="chart_div"></div></div>
+        <div class="clear"></div>
+    </div>
+    </div>
+
+
+
+</body>
+
+</html>

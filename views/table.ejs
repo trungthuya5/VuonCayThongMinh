@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Bordered Table</h2>
+        <p>The .table-bordered class adds borders to a table:</p>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nhiệt độ</th>
+                    <th>Độ ẩm</th>
+                    <th>Độ ẩm đất</th>
+                    <th>Thời gian</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(var i=0; i<datas.length; i++) {%>
+                    <tr>
+                        <td>
+                            <%= datas[i].id %>
+                        </td>
+                        <td>
+                            <%= datas[i].nhietdo %>
+                        </td>
+                        <td>
+                            <%= datas[i].doam %>
+                        </td>
+                        <td>
+                            <%= datas[i].doamdat %>
+                        </td>
+                        <td>
+                                <%= datas[i].time %>
+                            </td>
+                    </tr>
+                    <% } %>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>

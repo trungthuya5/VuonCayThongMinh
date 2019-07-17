@@ -1,0 +1,248 @@
+@font-face {
+    font-family:myfont;
+    src:url('UTM Showcard.ttf') format('truetype'),
+    url('UTM Showcard.ttf') format('embedded-opentype'),
+    url('UTM Showcard.ttf') format('woff');
+    }
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html, body {
+    color: #5f6368;
+    background: #fff;
+    font-size: bold;
+    font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    line-height: 1.42857143;
+    box-sizing: border-box;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.text-center {
+    text-align: center;
+}
+a:hover{
+    color: #fff;
+}
+.main {
+    width: 100%;
+    margin-top: 60px; 
+}
+
+.left {
+    width: 20%;
+    float: left;
+    background: #424a5d;  
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    /* position: fix */
+}
+
+.main-container {
+    background: #f7f7f7;
+    /* float:left; */
+    width: 80%;
+    margin: 0 auto;
+}
+
+.clear {
+    clear: both;
+}
+
+.menu {
+    border-left: #d9dee4 solid 1px;
+    width: auto;
+    
+}
+
+.menu ul {
+    padding: 0;
+    list-style-type: none;
+    text-align: left;
+    color: #aeb2b7;
+    padding-top: 15px;
+    padding-left: 14px;
+    background: #252c35;
+}
+
+.menu ul li{
+    width: auto;
+    height: 40px;
+    line-height: 40px;
+    margin-left: -15px;
+    padding-left: 15px; 
+    
+    /* border-bottom: #f7f7f7 solid 2px; */
+    
+}
+.menu ul li{
+    color: #AEB7C2;
+}
+
+.menu ul li:hover {
+   color: #fff;
+}
+.header {
+    height: 60px;
+    line-height: 60px;
+    padding-left: 20px;
+    background: #2962FF;
+    font-size: 1.3rem ;
+    color: #fff;
+    /* border-bottom: 1px solid #aeb2b7; */
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    border: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 12;
+    width: 100%;
+}
+
+.avatar {
+    width: auto;
+    background: #252c35;
+    border-left: #d9dee4 solid 1px;
+    line-height: 60px;
+    height: 60px;
+    font-weight: bold;
+}
+
+.info, .chart, .thongke, .data, .dieukhien, .caidat,.banquyen{
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    background: #fff;
+    margin: 20px;
+    padding: 20px;
+    height: auto;
+}
+.breadcrumb {
+    height: 40px;
+    line-height: 40px;
+    padding: 5px;
+    margin: 20px;
+    font-size: 1.5rem;
+}
+
+/* Top menu */
+.top-menu {
+    display: block;
+    float: right;
+    font-size: 15px;
+    
+}
+.top-menu ul {
+   list-style: none;
+   text-transform: uppercase;
+   font-family: myfont;
+   margin-right: 60px; 
+}
+.top-menu ul li {
+    float: left;
+    padding-right: 15px;
+}
+/* End Top Menu */
+/* Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
+    grid-gap: 10px;
+    padding: 10px;
+}
+.grid-container > div {
+    padding: 20px 0;
+}
+  .item1 {
+    grid-column:  span 1;
+  }
+  .item2 {
+      grid-column: span 2;
+  }
+  .item3 {
+      grid-column: span 3;
+  }
+  .item4 {
+      grid-column: span 4;
+  }
+  .item5 {
+      grid-column: span 5;
+  }
+  .item6 {
+      grid-column: span 6;
+  }
+  .item7 {
+      grid-column: span 7;
+  }
+  .item8 {
+      grid-column: span 8;
+  }
+  .item9 {
+      grid-column: span 9;
+  }
+  .item10 {
+      grid-column: span 10;
+  }
+  .item11 {
+      grid-column: span 11;
+  }
+  .item12 {
+      grid-column: span 12;
+  }
+  /* End Grid */
+
+/* Button */
+button{
+    border: none;
+    outline:none;
+}
+
+button.submit {
+    padding: 8px;
+    padding: 0 auto;
+}
+button.circle {
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    
+    text-align: center;
+    padding: 0 auto;
+    
+    font-weight:900;
+    font-size: 1.1em;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    border-radius: 100px; 
+}
+
+button.circle:hover {
+    box-shadow: 0px 0px 15px 10px;
+}
+
+button.circle:target{
+    border: hidden;
+}
+
+button.circle:focus {
+    border: hidden;
+}
+.bg-on {
+    border: 3px solid #C30;
+    color: #C30;
+}
+
+.bg-off {
+    border: 3px solid rgb(65, 62, 61);
+    color: rgb(65, 62, 61);
+}
+
+
+.slider {
+    width: 50%;
+}
